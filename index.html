@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Task Keeper - Manage Your Notes</title>
     <link rel="stylesheet" href="style.css?v=1.3">
-
+    <link rel="icon" type="image/x-icon" href="assets/android-chrome-512x512.png">
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
@@ -12,41 +12,37 @@
     <script defer src="main.js"></script>
 </head>
 
-<body onload="loadNotes()">
+<body onload="loadNotes() ">
 
+<header>
+    <h2 class="titleText">
+        Task keeper
+    </h2>
+</header>
 
-    <header>
-        <h2 class="titleText">
-            Task keeper
-        </h2>
-    </header>
-
-    <div class="mainCard">
-        <form method="dialog" onsubmit="addNote()">
-            <div id="messageDiv" class="messageDiv"></div>
-            <div class="noteForm">
-                <div class="textareaWrapper">
-                    <textarea id="contentTE" class="contentTE" placeholder="New Note"></textarea>
-                    <i onclick="clearForm()" class="bi bi-x-circle-fill"></i>
-                </div>
-
-                <div class="timeContainer">
-                    <label><i class="bi bi-clock-history"></i>Completion Time:</label>
-                    <div class="timeInputWrapper">
-                        <input type="datetime-local" id="timeInput" class="timeInput">
-                        <i class="bi bi-arrow-left-circle-fill"></i>
-                    </div>
-                </div>
-
-                <button class="addBtn">
-                    <i class="bi bi-plus-circle"></i>
-                    Add Note
-                </button>
+<div class="mainCard">
+    <form method="dialog" onsubmit="addNote()">
+        <div id="messageDiv" class="messageDiv"></div>
+        <div class="noteForm">
+            <div class="textareaWrapper">
+                <textarea id="contentTE" class="contentTE" placeholder="New Note"></textarea>
+                <button type="button" onclick="clearForm()" class="btn btn-secondary clearIconInline">Clear</button>
             </div>
-        </form>
-        <div id="containerDiv" class="containerDiv"></div>
-    </div>
+            <div class="timeContainer">
+                <label>Complete by</label>
+                <div class="timeInputWrapper">
+                    <input type="datetime-local" id="timeInput" class="timeInput">
+                </div>
+            </div>
 
+            <button class="addBtn">
+                <i class="bi bi-plus-circle"></i>
+                Add Note
+            </button>
+        </div>
+    </form>
+    <div id="containerDiv" class="containerDiv"></div>
+</div>
 
 </body>
 </html>
