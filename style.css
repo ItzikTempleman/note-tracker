@@ -160,9 +160,8 @@ body::before {
 }
 
 .messageDiv {
-    font-size: 28px;
+    font-size: 18px;
     color: red;
-    font-weight: bold;
     margin: 0 auto;
     text-align: center;
 }
